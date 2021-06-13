@@ -26,8 +26,8 @@ const linkRoutes = require("./routes/link");
 
 // app middlewares
 app.use(morgan("dev"));
-// app.use(bodyParser.json());
-app.use(bodyParser.json({ limit: "5mb", type: "application/json" }));
+// app.use(express.json());
+app.use(express.json({ limit: "5mb", type: "application/json" }));
 // app.use(cors()); // to allow communication between different domains like FrontEnd Backend or basically between different Domains
 app.use(cors({ origin: process.env.CLIENT_URL }));
 
